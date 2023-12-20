@@ -1,0 +1,9 @@
+{
+    "name": "LCPosterEditor",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/nyooNyoo/LCPosterEditor",
+    "description": "Allows you to edit the poster and tip textures in your ship, does not rely on external file generators!",
+    "dependencies": [
+      "BepInEx-BepInExPack-5.4.2100"
+    ]
+  }
