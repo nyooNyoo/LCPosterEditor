@@ -82,14 +82,12 @@ namespace LCPosterEditor
         {
             if (keepAspectRatio)
             {
-                if (image.Width > image.Height)
-                {
-                    height = height * width/image.Width;
-                }
-                else
-                {
-                    width = width * height/image.Height;
-                }
+                var ratioX = (double)width / image.Width;
+                var ratioY = (double)height / image.Height;
+                var ratio = Math.Min(ratioX, ratioY);
+
+                width = (int)(image.Width * ratio);
+                height = (int)(image.Height * ratio);
             }
 
             var destRect = new Rectangle(0, 0, width, height);
